@@ -1,3 +1,5 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Picture Quest</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
@@ -18,7 +20,8 @@
     --radius: 18px;
   }
 
-  *{box-sizing:border-box;}
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
   body{
     background:var(--bg);
     color:var(--ink);
@@ -27,7 +30,9 @@
     padding-block:24px 56px;
     max-width:920px;
     margin-inline:auto;
+    overflow-x:hidden;
   }
+  button{ touch-action:manipulation; }
   h1,h2,h3{ font-family:"Grandstander", ui-rounded, system-ui, sans-serif; text-wrap:balance; margin:0; }
   button{ font-family:inherit; }
   :focus-visible{ outline:3px solid var(--sun); outline-offset:2px; }
@@ -66,7 +71,7 @@
   }
   .mode-toggle button{
     border:none; background:transparent; cursor:pointer;
-    padding:9px 14px; border-radius:999px; font-weight:800;
+    padding:11px 14px; border-radius:999px; font-weight:800;
     font-size:.9rem; color:var(--ink-soft); white-space:nowrap;
     transition:background .15s ease, color .15s ease;
   }
@@ -210,8 +215,8 @@
   .edit-pin{
     position:absolute; bottom:-10px; left:50%; transform:translateX(-50%);
     background:#fff; border:2px solid var(--line); border-radius:999px;
-    padding:3px 10px; font-size:.66rem; font-weight:800; color:var(--ink-soft);
-    cursor:pointer; white-space:nowrap;
+    padding:7px 12px; font-size:.7rem; font-weight:800; color:var(--ink-soft);
+    cursor:pointer; white-space:nowrap; touch-action:manipulation;
   }
   .edit-pin:hover{ border-color:var(--accent); color:var(--accent-ink); }
 
